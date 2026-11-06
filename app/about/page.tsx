@@ -70,6 +70,8 @@ export default function About() {
           it). Google may use free-tier content to improve its products, so please leave out names and sensitive
           personal details.
         </p>
+        <p>Optional Microsoft Clarity analytics only loads after you accept it in Analytics preferences. It records page interactions; all page text, including tarot questions and readings, is masked before upload. No question or reading text is sent as an analytics event. You can decline without affecting the product, or withdraw using Analytics preferences.</p>
+        <p>Microsoft and the site owner are independent data controllers. Microsoft may use visitor data for its own services, product improvement and advertising under its <a href="https://privacy.microsoft.com/en-us/privacystatement" className="underline">privacy statement</a>. Advertising storage is denied in our Clarity integration. Shipped has read-only access to aggregate Clarity and Google Search Console counts and may publish those counts on the course project progress page. No individual recordings are imported by Shipped.</p>
       </Section>
 
       <Section id="disclaimer" title="A gentle disclaimer">
