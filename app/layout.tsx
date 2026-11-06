@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import AnalyticsConsent from "@/components/AnalyticsConsent";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   title: { default: "Moonlit Tarot · AI tarot readings for reflection", template: "%s · Moonlit Tarot" },
   description:
     "Draw from a full 78-card deck and receive a thoughtful, AI-written tarot reading for reflection. No signup needed.",
+  verification: { google: "XdZSbcEC32Ww2mBnY057T4_9ntVDP6_yR-FGSYQQGdA" },
   openGraph: {
     title: "Moonlit Tarot",
     description: "AI tarot readings for reflection.",
@@ -29,7 +31,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased" data-clarity-mask="true">
         <div className="stars" aria-hidden />
         <div className="relative z-10 flex min-h-dvh flex-col">
           <header className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-5 sm:px-6">
@@ -53,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </p>
             <p className="mt-2">© {new Date().getFullYear()} Moonlit Tarot</p>
           </footer>
+          <AnalyticsConsent />
         </div>
       </body>
     </html>
